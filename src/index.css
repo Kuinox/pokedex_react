@@ -1,13 +1,248 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('/public/Roboto-Thin.ttf') format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto Thin', sans-serif;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokeList {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.pokeEntry {
+  list-style-type: none;
+  width: 200px;
+  min-height: 100px;
+  margin: 2px;
+}
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.buttonContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 5px;
+}
+
+.pokemonInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.yellow {
+  background-color: #f0e68c;
+  color: #000;
+  border-color: #000;
+}
+
+.white {
+  background-color: #ffffff;
+  color: #000;
+  border-color: #000;
+}
+
+.red {
+  background-color: #f08080;
+  color: #000;
+  border-color: #000;
+}
+
+.purple {
+  background-color: #9b59b6;
+  color: #fff;
+  border-color: #fff;
+}
+
+.pink {
+  background-color: #ffc0cb;
+  color: #000;
+  border-color: #000;
+}
+
+.green {
+  background-color: #2ecc71;
+  color: #000;
+  border-color: #000;
+}
+
+.gray {
+  background-color: #7f8c8d;
+  color: #fff;
+  border-color: #fff;
+}
+
+.brown {
+  background-color: #A0522D;
+  color: #fff;
+  border-color: #fff;
+}
+
+.blue {
+  background-color: #3498db;
+  color: #fff;
+  border-color: #fff;
+}
+
+.black {
+  background-color: #000000;
+  color: #fff;
+  border-color: #fff;
+}
+
+
+
+/*header*/
+
+header {
+  width: 100%;
+}
+header nav{
+  display: flex;
+  align-items: center;
+  background-color: #3f51b5;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+header nav span {
+  font-size: 1.4em;
+}
+
+header nav input[type="text"] {
+  width: 50%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 50px;
+}
+
+/* Customize your search bar */
+header nav input[type="text"]::placeholder {
+  color: #888;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #3f51b5;
+  padding: 10px;
+  color: white;
+  box-sizing: border-box; 
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.close {
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 100%;
+  margin-right: 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+.typeList {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.typeList li {
+  width: 70px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  line-height: normal;
+  gap : 5px;
+}
+
+.typeIcon {
+  height: 15px;
+  width: 15px;
+}
+
+/* Define CSS classes for each color */
+.normal { background-color: #A8A77A; }
+.fire { background-color: #EE8130; }
+.water { background-color: #6390F0; }
+.electric { background-color: #F7D02C; }
+.grass { background-color: #7AC74C; }
+.ice { background-color: #96D9D6; }
+.fighting { background-color: #C22E28; }
+.poison { background-color: #A33EA1; }
+.ground { background-color: #E2BF65; }
+.flying { background-color: #A98FF3; }
+.psychic { background-color: #F95587; }
+.bug { background-color: #A6B91A; }
+.rock { background-color: #B6A136; }
+.ghost { background-color: #735797; }
+.dragon { background-color: #6F35FC; }
+.dark { background-color: #705746; }
+.steel { background-color: #B7B7CE; }
+.fairy { background-color: #D685AD; }

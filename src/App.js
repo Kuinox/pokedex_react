@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import TopBar from './TopBar';
+import PokemonListDisplay from "./PokemonListDisplay";
+import PokemonInfoDisplay from "./PokemonInfoDisplay";
 
-function App() {
+const App = ({ pokeStore }) => {
+  const [searchInput, setSearchInput] = useState("");
+  const [currentPokemon, setCurrentPokemon] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopBar searchEvent={setSearchInput} />
+      <PokemonListDisplay
+        pokeStore={pokeStore}
+        getSearchText={() => searchInput}
+        pokemonChoosedCallback={setCurrentPokemon} />
+      <PokemonInfoDisplay pokeStore={pokeStore} pokemonId={currentPokemon} onClose={() => setCurrentPokemon("")} />
     </div>
   );
 }

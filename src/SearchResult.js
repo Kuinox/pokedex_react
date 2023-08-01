@@ -15,7 +15,7 @@ const SearchResult = (props) => {
                     <span>#{props.pokemonId}</span>
                     <span>{pokemonName}</span>
                     <ul className="typeList">
-                        {props.types.map((t, i) => <li key={i} className={t}>{t}<img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /></li>)}
+                        {props.types.map((t, i) => <li key={i} className={t}>{t}<img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /><img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /><img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /><img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /><img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /><img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /><img className='typeIcon' src={`${t}.png`} alt={`${t} icon.`} /></li>)}
                     </ul>
                     <br />
                 </div>

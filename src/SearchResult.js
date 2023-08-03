@@ -35,7 +35,7 @@ const SearchResult = (props) => {
     }
     let imgSrc = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + props.pokemonId + ".png";
     return (
-        <li className="pokeEntry">
+        <li className={props.hidden ? "pokeEntry" : "pokeEntry hidden"}>
             <button onClick={clicked} className={props.color}>
                 <div className="buttonContent">
                     <div className="genList">

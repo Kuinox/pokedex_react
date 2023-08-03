@@ -17,7 +17,7 @@ const PokemonListDisplay = ({ classes, pokeStore, getSearchText, pokemonChoosedC
                 {
                     pokeListCache
                         .filter(p => p.name.match(new RegExp(".*" + text + ".*")))
-                        .map((p) => <SearchResult pokeStore={pokeStore} pokemonId={p.id} key={p.id} pokemonName={p.name} color={p.color} onClick={onClick} types={p.types}/>)
+                        .map((p) => <SearchResult pokeStore={pokeStore} pokemonId={p.id} key={p.id} pokemonName={p.name} color={p.color} generations={p.generations} onClick={onClick} types={p.types}/>)
                 }
             </div>
         )

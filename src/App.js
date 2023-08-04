@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TopBar from './TopBar';
 import PokemonListDisplay from "./PokemonListDisplay";
+import PokemonInfoDisplay from "./PokemonInfoDisplay";
 
 const App = ({ pokeStore }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -13,6 +14,7 @@ const App = ({ pokeStore }) => {
         pokeStore={pokeStore}
         getSearchText={() => searchInput}
         pokemonChoosedCallback={setCurrentPokemon} />
+      <PokemonInfoDisplay pokeStore={pokeStore} pokemonId={currentPokemon} onClose={() => setCurrentPokemon("")} />
     </div>
   );
 }

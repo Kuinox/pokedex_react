@@ -20,7 +20,6 @@ const PokemonListDisplay = ({ classes, pokeStore, getSearchText, pokemonChoosedC
                             hidden={p.name.match(new RegExp(".*" + text + ".*"))}
                             pokeStore={pokeStore}
                             pokemonId={p.id}
-                            key={p.id}
                             pokemonName={p.name}
                             color={p.color}
                             generations={p.generations}
@@ -33,7 +32,7 @@ const PokemonListDisplay = ({ classes, pokeStore, getSearchText, pokemonChoosedC
         )
     }
 
-    return (<ul>{searchPokemon()}</ul>);
+    return (<ul className="pokeListUl">{searchPokemon()}</ul>);
 }
 
 export default PokemonListDisplay;

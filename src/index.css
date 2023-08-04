@@ -50,64 +50,80 @@ button {
   height: 100%;
 }
 
+.pokemonId {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .yellow {
   background-color: #f0e68c;
   color: #000;
+  fill: #000;
   border-color: #000;
 }
 
 .white {
   background-color: #ffffff;
   color: #000;
+  fill: #000;
   border-color: #000;
 }
 
 .red {
   background-color: #f08080;
   color: #000;
+  fill: #000;
   border-color: #000;
 }
 
 .purple {
   background-color: #9b59b6;
   color: #fff;
+  fill: #fff;
   border-color: #fff;
 }
 
 .pink {
   background-color: #ffc0cb;
   color: #000;
+  fill: #000;
   border-color: #000;
 }
 
 .green {
   background-color: #2ecc71;
   color: #000;
+  fill: #000;
   border-color: #000;
 }
 
 .gray {
   background-color: #7f8c8d;
   color: #fff;
+  fill: #fff;
   border-color: #fff;
 }
 
 .brown {
   background-color: #A0522D;
   color: #fff;
+  fill: #fff;
   border-color: #fff;
 }
 
 .blue {
   background-color: #3498db;
   color: #fff;
+  fill: #fff;
   border-color: #fff;
 }
 
 .black {
   background-color: #000000;
   color: #fff;
+  fill: #fff;
   border-color: #fff;
 }
 
@@ -236,6 +252,7 @@ li {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  height: 16.6px;
 }
 .genList span {
   width: 20px;

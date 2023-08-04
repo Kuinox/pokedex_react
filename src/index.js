@@ -29,11 +29,11 @@ function refreshLoop(timeStamp) {
   if (actualFrameTime > averageFrameTime * 1.2) { // if actual frame time is significantly longer than average
     droppedFrames += (actualFrameTime / averageFrameTime) - 1; // calculate number of dropped frames
   }
-
-  console.log('Dropped frames: ' + droppedFrames); // output number of dropped frames
-
   window.requestAnimationFrame(refreshLoop);
 }
 
 window.requestAnimationFrame(refreshLoop);
 
+setInterval(() => {
+  document.getElementById("frameDropped").innerHTML = "Dropped Frames: " + droppedFrames.toFixed(0);
+}, 1000);

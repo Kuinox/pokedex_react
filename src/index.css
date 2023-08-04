@@ -341,3 +341,7 @@ li {
   border: 2px solid #d81b60; /* Darker shade of pink for border */
   color: #000000; /* Black font color */
 }
+
+#droppedFrames {
+  margin-left: 50px;
+}

@@ -16,7 +16,7 @@ const TopBar = ({ searchEvent }) => {
                         placeholder="Search…"
                         aria-label='search'
                     />
-                    <div></div>
+                    <div id="frameDropped"></div>
                 </nav>
             </header>
         </div>

@@ -12,7 +12,7 @@ const App = ({ pokeStore }) => {
       <TopBar searchEvent={setSearchInput} />
       <PokemonListDisplay
         pokeStore={pokeStore}
-        getSearchText={() => searchInput}
+        getSearchText={searchInput}
         pokemonChoosedCallback={setCurrentPokemon} />
       <PokemonInfoDisplay pokeStore={pokeStore} pokemonId={currentPokemon} onClose={() => setCurrentPokemon("")} />
     </div>

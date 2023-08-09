@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SearchResult from "./SearchResult";
 
-const PokemonListDisplay = ({ classes, pokeStore, getSearchText, pokemonChoosedCallback }) => {
+const PokemonListDisplay = ({ pokeStore, searchText, pokemonChoosedCallback }) => {
     const [pokeListCache, setPokeListCache] = useState([]);
 
     useEffect(() => {
@@ -11,22 +11,20 @@ const PokemonListDisplay = ({ classes, pokeStore, getSearchText, pokemonChoosedC
         pokemonChoosedCallback(id);
     }
     const searchPokemon = () => {
-        let text = getSearchText();
+        let text = searchText;
         return (
             <div className="pokeList">
                 {
                     pokeListCache
                         .map((p) => <SearchResult
                             hidden={p.name.match(new RegExp(".*" + text + ".*"))}
-                            pokeStore={pokeStore}
                             pokemonId={p.id}
                             pokemonName={p.name}
                             color={p.color}
                             generations={p.generations}
                             onClick={onClick}
                             types={p.types}
-                            
-                            />)
+                        />)
                 }
             </div>
         )

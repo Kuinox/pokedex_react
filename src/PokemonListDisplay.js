@@ -11,7 +11,7 @@ const PokemonListDisplay = ({ classes, pokeStore, getSearchText, pokemonChoosedC
         pokemonChoosedCallback(id);
     }
     const searchPokemon = () => {
-        let text = getSearchText();
+        let text = getSearchText;
         return (
             <div className="pokeList">
                 {
